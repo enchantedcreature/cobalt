@@ -43,6 +43,9 @@ export const testers = {
         (pattern.sub?.length <= 22 && pattern.shareId?.length <= 16) ||
         (pattern.shortId?.length <= 16),
 
+    "redgifs": pattern =>
+        pattern.id?.length > 15,
+
     "rutube": pattern =>
         (pattern.id?.length === 32 && pattern.key?.length <= 32) ||
         pattern.id?.length === 32 ||

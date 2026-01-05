@@ -30,6 +30,7 @@ import facebook from "./services/facebook.js";
 import bluesky from "./services/bluesky.js";
 import xiaohongshu from "./services/xiaohongshu.js";
 import newgrounds from "./services/newgrounds.js";
+import redgifs from "./services/redgifs.js";
 
 let freebind;
 
@@ -273,6 +274,12 @@ export default async function({ host, patternMatch, params, authType }) {
                 r = await newgrounds({
                     ...patternMatch,
                     quality: params.videoQuality,
+                });
+                break;
+
+            case "redgifs":
+                r = await redgifs({
+                    id: patternMatch.id,
                 });
                 break;
 

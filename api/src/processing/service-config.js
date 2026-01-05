@@ -103,6 +103,12 @@ export const services = {
         ],
         subdomains: "*",
     },
+    redgifs: {
+        patterns: [
+            "watch/:id",
+            "ifr/:id"
+        ],
+    },
     rutube: {
         patterns: [
             "video/:id",
